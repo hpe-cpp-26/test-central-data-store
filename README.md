@@ -4,7 +4,7 @@ This document defines the architecture for the internal ML training pipeline,
 covering dataset versioning, experiment tracking, model registry, and
 promotion workflows for production deployment.
 
-Dataset Management
+Dataset 
 
     ------------------
     Training datasets are versioned using DVC and stored in object storage (S3).
