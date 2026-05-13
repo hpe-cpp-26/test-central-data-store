@@ -1,4 +1,5 @@
-title="Resilient Async Coordination — Spike Notes",
+# title="Resilient Async Coordination — Spike Notes",
+
 content="""
 Background
 
@@ -10,7 +11,8 @@ vary unpredictably. The context is a multi-provider orchestration layer
 that aggregates responses, ranks results, and delivers them within
 a time budget.
 
-    Core Problem
+## Core Problem
+
     ------------
     Downstream providers respond at inconsistent rates. Some return stale
     data; others time out silently. The orchestration layer must decide
