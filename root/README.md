@@ -1,4 +1,6 @@
-"""Summary
+content="""
+Summary
+-------
 This document covers webhook hardening for the payment gateway service.
 It defines idempotency key handling, retry backoff strategies, and
 failure state logging for settlement jobs.
@@ -43,9 +45,7 @@ source="confluence",
 title="Autonomous Fault Recovery — Design Notes",
 content="""
 Overview
-
----
-
+--------
 This document captures early design notes for an automated fault response
 capability being explored by the platform reliability team. The goal is to
 reduce manual intervention during production degradations by introducing
@@ -92,5 +92,3 @@ programmatic corrective actions triggered by telemetry signals.
     Fewer escalations to senior engineers for routine fault patterns.
     Audit trail of every automated action with rollback capability.
     """,
-
-"""
