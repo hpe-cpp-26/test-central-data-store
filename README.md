@@ -1,59 +1,47 @@
-# title="Resilient Async Coordination — Spike Notes",
+# title="ML Training Pipeline — Experiment Tracking Design",
 
-content="""
-Background
+# content="""
 
----
+    Purpose
+    -------
+    This document defines the architecture for the internal ML training pipeline,
+    covering dataset versioning, experiment tracking, model registry, and
+    promotion workflows for production deployment.
 
-This spike explores patterns for coordinating async workflows across
-distributed providers where latency, availability, and data freshness
-vary unpredictably. The context is a multi-provider orchestration layer
-that aggregates responses, ranks results, and delivers them within
-a time budget.
+    Dataset Management
+    ------------------
+    Training datasets are versioned using DVC and stored in object storage (S3).
+    Each dataset version is tagged with a schema hash to detect silent drift.
+    Splits (train / val / test) are fixed per version to ensure reproducibility
+    across experiment runs.
 
-## Core Problem
+    Experiment Tracking
+    -------------------
+    MLflow is used to log hyperparameters, metrics, and artefacts per run.
+    Each experiment is associated with a Git commit SHA and a dataset version tag.
+    Runs are grouped by model family (classification, ranking, embedding).
 
-    ------------
-    Downstream providers respond at inconsistent rates. Some return stale
-    data; others time out silently. The orchestration layer must decide
-    when to wait, when to use cached results, and when to degrade gracefully
-    without surfacing failures to the end user.
+    Training Infrastructure
+    -----------------------
+    GPU jobs run on Kubernetes using the training operator. Resource quotas are
+    enforced per team. Spot instance interruptions are handled via checkpoint
+    resumption — jobs save state every 500 steps.
 
-    Patterns Under Consideration
+    Model Registry and Promotion
     ----------------------------
-    - Deadline propagation: pass remaining time budget to each downstream
-      call so late responses are abandoned rather than awaited
-    - Ranked fallback: if the preferred provider fails, substitute the
-      next-ranked option based on recent reliability scores
-    - Partial assembly: return a complete-enough response using available
-      data rather than blocking on a slow or unavailable source
-    - Suppression windows: ignore transient signal spikes during known
-      high-churn periods to avoid triggering unnecessary corrective steps
+    Trained models are registered in MLflow Model Registry with stage labels:
+    Staging → Canary → Production. Promotion requires sign-off from a model
+    reviewer and passing evaluation against a held-out benchmark dataset.
 
-    Caching Considerations
-    ----------------------
-    Cached responses carry a confidence score that decays over time.
-    When confidence drops below a threshold, the layer fetches a fresh
-    result but continues serving the cached version until the refresh
-    completes. TTLs are provider-specific and tuned per observed staleness.
+    Serving
+    -------
+    Production models are served via Triton Inference Server behind an internal
+    gRPC gateway. Latency SLOs: P50 < 10ms, P99 < 50ms for embedding models.
+    Model versions are shadowed before full cutover to detect regression.
 
-    Scoring and Selection
-    ---------------------
-    Candidates are ranked using a blended score that combines availability
-    history, response latency percentiles, and a freshness weight. The
-    scoring model is re-evaluated periodically using recent signal windows.
-    Low-scoring providers are deprioritised but not permanently excluded.
-
-    Open Questions
-    --------------
-    1. Should suppression be time-based or signal-count-based?
-    2. How do we handle correlated failures across providers in the same region?
-    3. Is the confidence decay curve appropriate for providers with bursty patterns?
-    4. What audit trail do we need for selection decisions and fallback events?
-
-    Success Criteria
-    ----------------
-    Improved response assembly rate during provider degradation.
-    Reduction in hard failures surfaced to downstream consumers.
-    Stable ranked output under partial availability conditions.
+    Monitoring
+    ----------
+    Feature drift is detected using PSI scores computed daily against the
+    training distribution. Alerts fire when PSI > 0.2 for any top-20 feature.
+    Prediction confidence histograms are logged per model per hour.
     """,
