@@ -4,7 +4,7 @@ This document defines the architecture for the internal ML training pipeline,
 covering dataset versioning, experiment tracking, model registry, and
 promotion workflows for production deployment.
 
-## Dataset Management
+Dataset Management
 
     ------------------
     Training datasets are versioned using DVC and stored in object storage (S3).
@@ -41,4 +41,3 @@ promotion workflows for production deployment.
     Feature drift is detected using PSI scores computed daily against the
     training distribution. Alerts fire when PSI > 0.2 for any top-20 feature.
     Prediction confidence histograms are logged per model per hour.
-    """,
