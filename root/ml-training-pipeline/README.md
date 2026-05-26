@@ -1,3 +1,4 @@
+---
 # ml-training-pipeline
 
 ## Group Overview
@@ -27,3 +28,4 @@ This document group contains technical documentation for the ML Training Pipelin
 | Project     | ml-training-pipeline   |
 | Status      | active                 |
 | Last Updated| 2026-05-26             |
+---
