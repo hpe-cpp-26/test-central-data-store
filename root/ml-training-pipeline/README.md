@@ -16,6 +16,8 @@ This document group contains technical documentation for the ML Training Pipelin
 - Model registry
 - Feature drift monitoring
 - Model serving with Triton
+- DVC for dataset versioning
+- Kubernetes-based training infrastructure
 
 ## Team & Metadata
 
@@ -24,4 +26,4 @@ This document group contains technical documentation for the ML Training Pipelin
 | Team        | ml-platform            |
 | Project     | ml-training-pipeline   |
 | Status      | active                 |
-| Last Updated| 2024-04-01             |
+| Last Updated| 2026-05-26             |
