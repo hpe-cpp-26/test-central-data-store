@@ -30,6 +30,9 @@ This document group contains technical design notes and related documentation fo
 - **Self-Healing System — Technical Documentation** (Source: GitHub)  
   The Self-Healing System is a distributed backend platform designed to automatically detect, diagnose, and recover from failures without manual intervention. It continuously monitors services, identifies anomalies, and triggers automated recovery workflows to maintain platform stability. Key features include real-time health monitoring, traffic rerouting, fallback handling, distributed logging, and centralized observability. The system detects service crashes, database failures, network instability, and resource exhaustion. Recovery actions include restarting containers, rerouting traffic, activating fallback services, scaling dynamically, and clearing stuck queues. It supports failure simulation through chaos testing, network partition simulation, and dependency timeout injection. The system is built for fault tolerance, resilience, and high availability in distributed infrastructure.
 
+- **Threat Intelligence Correlation Engine** (Source: Jira)  
+  This document describes the design for a cybersecurity threat intelligence correlation engine used to aggregate indicators of compromise (IOCs), enrich attack telemetry, and generate risk-scored security incidents. It processes security events from endpoint agents, SIEM feeds, firewall logs, and cloud audit streams. The system correlates IP reputation matches, malware hash signatures, suspicious authentication patterns, geographic login anomalies, and privilege escalation chains. It supports automated response actions such as disabling compromised accounts, isolating infected endpoints, revoking API tokens, and blocking malicious IP ranges. The infrastructure includes Kafka for streaming, Elasticsearch for telemetry indexing, and Redis for IOC caching. This system is part of the threat intelligence platform and is used for incident response and security automation.
+
 ## Key Topics
 
 - Automated fault recovery  
@@ -70,6 +73,11 @@ This document group contains technical design notes and related documentation fo
 - Dynamic scaling  
 - Dependency timeout injection  
 - Container health monitoring  
+- Threat intelligence correlation  
+- Security automation  
+- Incident response  
+- SIEM integration  
+- IOC aggregation  
 
 ## Team & Metadata
 
