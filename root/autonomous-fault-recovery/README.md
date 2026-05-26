@@ -1,3 +1,4 @@
+---
 # autonomous-fault-recovery
 
 ## Group Overview
@@ -11,6 +12,9 @@ This document group contains technical design notes and related documentation fo
 
 - **Self-Healing System — Technical Documentation** (Source: GitHub)  
   Describes a distributed backend platform that automatically detects, diagnoses, and recovers from failures without manual intervention. It includes real-time health monitoring, traffic rerouting, fallback handling, and failure simulation for resilience testing.
+
+- **Autonomous Fault Recovery — Design Notes** (Source: Confluence)  
+  Captures early design notes for an automated fault response capability being explored by the platform reliability team. The goal is to reduce manual intervention during production degradations by introducing programmatic corrective actions triggered by telemetry signals.
 
 ## Key Topics
 
@@ -30,6 +34,10 @@ This document group contains technical design notes and related documentation fo
 - Traffic rerouting  
 - Fallback handling  
 - Chaos testing  
+- Action loop prevention  
+- Deployment suppression windows  
+- Root cause analysis (RCA) integration  
+- Change event correlation  
 
 ## Team & Metadata
 
@@ -39,3 +47,4 @@ This document group contains technical design notes and related documentation fo
 | Project     | autonomous-fault-recovery |
 | Status      | draft                     |
 | Last Updated| 2026-05-26                |
+---
