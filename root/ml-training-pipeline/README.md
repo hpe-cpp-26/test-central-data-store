@@ -1,21 +1,21 @@
 # ml-training-pipeline
 
 ## Group Overview
-This document group contains technical documentation for the ML Training Pipeline project, focusing on the design and implementation of an experiment tracking system. It covers the architecture, infrastructure, and workflows for managing machine learning models from training to production deployment.
+This document group contains technical documentation for the ML Training Pipeline project, focusing on the design and implementation of an experiment tracking system. It covers the architecture, dataset versioning, model training workflows, and deployment strategies for machine learning models.
 
 ## Documents in this Group
 - **ML Training Pipeline — Experiment Tracking Design** (Source: Confluence)  
-  Defines the architecture for dataset versioning, experiment tracking, model registry, and model promotion workflows.
+  Defines the architecture for the ML training pipeline, including dataset versioning, experiment tracking, model registry, and model promotion workflows.
 
 ## Key Topics
 - Dataset versioning
 - MLflow experiment tracking
-- Model registry and promotion
-- GPU-based training on Kubernetes
-- Triton Inference Server
-- Feature drift monitoring
+- Model promotion workflow
+- GPU-based training
+- Feature drift detection
+- Model registry integration
 - Shadow deployment
-- Model evaluation and regression detection
+- Latency SLOs
 
 ## Team & Metadata
 
