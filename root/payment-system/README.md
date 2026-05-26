@@ -1,35 +1,27 @@
-# Group: Payment System
+# payment-system
 
-## Summary
+## Group Overview
+This document group contains technical documentation focused on enhancing the reliability and security of webhook processing in a payment gateway system. It addresses strategies for handling retries, idempotency, fraud detection, and system monitoring.
 
-This project handles secure and reliable payment processing, including transaction handling, payment gateway integration, and financial record management. It ensures high availability and consistency for all monetary operations.
+## Documents in this Group
+- **Payment Gateway Webhook Hardening** (Source: GitHub)  
+  Describes webhook hardening strategies including idempotency key handling, retry backoff, and failure logging for settlement jobs.
 
-## Responsibilities
+## Key Topics
+- Webhook reliability
+- Idempotency handling
+- Retry backoff strategies
+- Fraud signal integration
+- Failure state logging
+- Merchant throttling
+- Settlement job monitoring
+- Embedding-based fraud detection
 
-- Process user payments and transactions
-- Integrate with external payment gateways
-- Handle payment status tracking and retries
-- Ensure data consistency and transaction integrity
-- Detect and handle failed or fraudulent transactions
+## Team & Metadata
 
-## Data Sources
-
-- jira/ → Payment failures, transaction bugs, gateway issues
-- confluence/ → Payment workflows, financial architecture, compliance guidelines
-- github/ → Payment services, transaction handlers, integration modules
-
-## Tags
-
-payments, transactions, fintech, reliability, consistency
-
-## Document IDs
-
-pay_doc_1, pay_doc_2, pay_doc_3
-
-## Tech Stack
-
-FastAPI, PostgreSQL, Kafka, Stripe API
-
-## Last Updated
-
-2026-05-05
+| Field       | Value              |
+|-------------|--------------------|
+| Team        | backend            |
+| Project     | payment-system     |
+| Status      | in-review          |
+| Last Updated| 2024-02-10         |
