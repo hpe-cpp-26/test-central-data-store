@@ -1,4 +1,3 @@
----
 # autonomous-fault-recovery
 
 ## Group Overview
@@ -9,6 +8,9 @@ This document group contains technical design notes and related documentation fo
 
 - **Autonomous Fault Recovery — Design Notes** (Source: Confluence)  
   Outlines the design of an automated fault recovery system using telemetry signals to trigger predefined corrective actions.
+
+- **Self-Healing System — Technical Documentation** (Source: GitHub)  
+  Describes a distributed backend platform that automatically detects, diagnoses, and recovers from failures without manual intervention. It includes real-time health monitoring, traffic rerouting, fallback handling, and failure simulation for resilience testing.
 
 ## Key Topics
 
@@ -22,6 +24,12 @@ This document group contains technical design notes and related documentation fo
 - Mean time to recovery (MTTR) improvement  
 - Log anomaly patterns  
 - Distributed trace latency outliers  
+- Self-healing systems  
+- Resilience engineering  
+- Fault tolerance  
+- Traffic rerouting  
+- Fallback handling  
+- Chaos testing  
 
 ## Team & Metadata
 
@@ -31,4 +39,3 @@ This document group contains technical design notes and related documentation fo
 | Project     | autonomous-fault-recovery |
 | Status      | draft                     |
 | Last Updated| 2026-05-26                |
----
