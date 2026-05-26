@@ -1,4 +1,3 @@
----
 # autonomous-fault-recovery
 
 ## Group Overview
@@ -27,6 +26,9 @@ This document group contains technical design notes and related documentation fo
 
 - **Resilient Async Coordination — Spike Notes** (Source: Confluence)  
   This document outlines a strategy for managing asynchronous coordination across distributed providers in a resilient orchestration system. The goal is to aggregate and rank responses from multiple sources while handling latency, unavailability, and stale data. Key patterns include deadline propagation, ranked fallback, partial assembly, and suppression windows. Caching is used with confidence scores that decay over time, and provider selection is based on availability, latency, and freshness. The system must degrade gracefully, avoid surfacing failures, and maintain stable output even when some providers fail. Open questions remain about suppression triggers, correlated failures, confidence decay curves, and audit requirements. Success is measured by improved response rates, reduced hard failures, and consistent ranked output.
+
+- **Self-Healing System — Technical Documentation** (Source: GitHub)  
+  The Self-Healing System is a distributed backend platform designed to automatically detect, diagnose, and recover from failures without manual intervention. It continuously monitors services, identifies anomalies, and triggers automated recovery workflows to maintain platform stability. Key features include real-time health monitoring, traffic rerouting, fallback handling, distributed logging, and centralized observability. The system detects service crashes, database failures, network instability, and resource exhaustion. Recovery actions include restarting containers, rerouting traffic, activating fallback services, scaling dynamically, and clearing stuck queues. It supports failure simulation through chaos testing, network partition simulation, and dependency timeout injection. The system is built for fault tolerance, resilience, and high availability in distributed infrastructure.
 
 ## Key Topics
 
@@ -64,6 +66,10 @@ This document group contains technical design notes and related documentation fo
 - Caching strategies  
 - Confidence scoring  
 - Audit trails  
+- Centralized observability  
+- Dynamic scaling  
+- Dependency timeout injection  
+- Container health monitoring  
 
 ## Team & Metadata
 
