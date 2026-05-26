@@ -1,3 +1,4 @@
+---
 # autonomous-fault-recovery
 
 ## Group Overview
@@ -23,6 +24,9 @@ This document group contains technical design notes and related documentation fo
 
 - **Autonomous Fault Recovery — Design Notes** (Source: Confluence)  
   This document captures early design notes for an automated fault response capability being explored by the platform reliability team. The goal is to reduce manual intervention during production degradations by introducing programmatic corrective actions triggered by telemetry signals.
+
+- **Resilient Async Coordination — Spike Notes** (Source: Confluence)  
+  This document outlines a strategy for managing asynchronous coordination across distributed providers in a resilient orchestration system. The goal is to aggregate and rank responses from multiple sources while handling latency, unavailability, and stale data. Key patterns include deadline propagation, ranked fallback, partial assembly, and suppression windows. Caching is used with confidence scores that decay over time, and provider selection is based on availability, latency, and freshness. The system must degrade gracefully, avoid surfacing failures, and maintain stable output even when some providers fail. Open questions remain about suppression triggers, correlated failures, confidence decay curves, and audit requirements. Success is measured by improved response rates, reduced hard failures, and consistent ranked output.
 
 ## Key Topics
 
@@ -57,6 +61,9 @@ This document group contains technical design notes and related documentation fo
 - Centralized metrics  
 - Monitoring dashboards  
 - One-click approval flows  
+- Caching strategies  
+- Confidence scoring  
+- Audit trails  
 
 ## Team & Metadata
 
