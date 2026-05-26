@@ -1,23 +1,22 @@
 # payment-system
 
-## Group Overview
-This document group contains technical documentation focused on enhancing the reliability and security of webhook processing in a payment gateway system. It addresses strategies for handling retries, idempotency, fraud detection, and system monitoring.
+**Group Overview**  
+This document group contains technical documentation focused on enhancing the reliability and security of webhook processing in a payment gateway system. It addresses strategies for handling idempotency, retry mechanisms, fraud detection, and system monitoring to ensure robust and secure transaction settlement.
 
-## Documents in this Group
-- **Payment Gateway Webhook Hardening** (Source: GitHub)  
-  Describes webhook hardening strategies including idempotency key handling, retry backoff, and failure logging for settlement jobs.
+**Documents in this Group**  
+- **Payment Gateway Webhook Hardening** (Source: GitHub) — Describes webhook hardening strategies including idempotency key handling, retry backoff, and fraud signal integration for secure and reliable payment processing.
 
-## Key Topics
-- Webhook reliability
-- Idempotency handling
-- Retry backoff strategies
-- Fraud signal integration
-- Failure state logging
-- Merchant throttling
-- Settlement job monitoring
-- Embedding-based fraud detection
+**Key Topics**  
+- Webhook reliability  
+- Idempotency handling  
+- Retry backoff strategies  
+- Fraud detection signals  
+- Settlement job logging  
+- Merchant throttling  
+- Webhook delivery metrics  
+- Postgres and pgvector integration  
 
-## Team & Metadata
+**Team & Metadata**  
 
 | Field       | Value              |
 |-------------|--------------------|
