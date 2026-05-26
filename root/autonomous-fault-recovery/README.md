@@ -21,6 +21,9 @@ This document group contains technical design notes and related documentation fo
 - **Self-Healing System — Technical Documentation** (Source: GitHub)  
   The Self-Healing System is a distributed backend platform designed to automatically detect, diagnose, and recover from failures without manual intervention. It continuously monitors services, identifies anomalies, and triggers automated recovery workflows to maintain platform stability. Key features include real-time health monitoring, traffic rerouting, fallback handling, distributed logging, and centralized metrics. The system detects service crashes, database failures, network instability, and resource exhaustion. Recovery actions include restarting containers, rerouting traffic, activating fallback services, scaling services, rolling back deployments, and clearing stuck queues. Observability is maintained through health metrics, logs, distributed tracing, and monitoring dashboards. The system supports failure simulation via chaos testing, network partition simulation, and dependency timeout injection to validate recovery mechanisms.
 
+- **Autonomous Fault Recovery — Design Notes** (Source: Confluence)  
+  This document captures early design notes for an automated fault response capability being explored by the platform reliability team. The goal is to reduce manual intervention during production degradations by introducing programmatic corrective actions triggered by telemetry signals.
+
 ## Key Topics
 
 - Automated fault recovery  
@@ -53,6 +56,7 @@ This document group contains technical design notes and related documentation fo
 - Distributed logging  
 - Centralized metrics  
 - Monitoring dashboards  
+- One-click approval flows  
 
 ## Team & Metadata
 
