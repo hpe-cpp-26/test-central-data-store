@@ -16,6 +16,9 @@ This document group contains technical design notes and related documentation fo
 - **Autonomous Fault Recovery — Design Notes** (Source: Confluence)  
   Captures early design notes for an automated fault response capability being explored by the platform reliability team. The goal is to reduce manual intervention during production degradations by introducing programmatic corrective actions triggered by telemetry signals.
 
+- **Resilient Async Coordination — Spike Notes** (Source: Confluence)  
+  Outlines a strategy for managing asynchronous coordination across distributed providers in a resilient orchestration system. The focus is on handling inconsistent response times, stale data, and silent failures while maintaining user experience.
+
 ## Key Topics
 
 - Automated fault recovery  
@@ -38,6 +41,13 @@ This document group contains technical design notes and related documentation fo
 - Deployment suppression windows  
 - Root cause analysis (RCA) integration  
 - Change event correlation  
+- Asynchronous coordination  
+- Deadline propagation  
+- Ranked fallback  
+- Partial assembly  
+- Suppression windows  
+- Confidence decay  
+- Provider ranking  
 
 ## Team & Metadata
 
