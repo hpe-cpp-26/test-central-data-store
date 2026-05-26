@@ -1,4 +1,3 @@
----
 # autonomous-fault-recovery
 
 ## Group Overview
@@ -18,6 +17,9 @@ This document group contains technical design notes and related documentation fo
 
 - **Resilient Async Coordination — Spike Notes** (Source: Confluence)  
   Outlines a strategy for managing asynchronous coordination across distributed providers in a resilient orchestration system. The focus is on handling inconsistent response times, stale data, and silent failures while maintaining user experience.
+
+- **Self-Healing System — Technical Documentation** (Source: GitHub)  
+  The Self-Healing System is a distributed backend platform designed to automatically detect, diagnose, and recover from failures without manual intervention. It continuously monitors services, identifies anomalies, and triggers automated recovery workflows to maintain platform stability. Key features include real-time health monitoring, traffic rerouting, fallback handling, distributed logging, and centralized metrics. The system detects service crashes, database failures, network instability, and resource exhaustion. Recovery actions include restarting containers, rerouting traffic, activating fallback services, scaling services, rolling back deployments, and clearing stuck queues. Observability is maintained through health metrics, logs, distributed tracing, and monitoring dashboards. The system supports failure simulation via chaos testing, network partition simulation, and dependency timeout injection to validate recovery mechanisms.
 
 ## Key Topics
 
@@ -48,6 +50,9 @@ This document group contains technical design notes and related documentation fo
 - Suppression windows  
 - Confidence decay  
 - Provider ranking  
+- Distributed logging  
+- Centralized metrics  
+- Monitoring dashboards  
 
 ## Team & Metadata
 
@@ -57,4 +62,3 @@ This document group contains technical design notes and related documentation fo
 | Project     | autonomous-fault-recovery |
 | Status      | draft                     |
 | Last Updated| 2026-05-26                |
----
