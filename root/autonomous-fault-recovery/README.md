@@ -2,22 +2,22 @@
 
 ## Group Overview
 
-This document group contains design notes and related documentation for the Autonomous Fault Recovery initiative. The goal is to develop an automated system that reduces manual intervention during production degradations by triggering predefined corrective actions based on telemetry signals.
+This document group contains design notes and related documentation for the Autonomous Fault Recovery initiative. The goal is to develop a system that reduces manual intervention during production degradations by implementing automated corrective actions based on telemetry signals.
 
 ## Documents in this Group
 
-- **Autonomous Fault Recovery — Design Notes** (Source: confluence)  
-  Outlines the design of an automated fault recovery system using telemetry signals to trigger predefined corrective actions.
+- **Autonomous Fault Recovery — Design Notes** (Source: Confluence)  
+  Outlines the design of an autonomous fault recovery system using telemetry signals to trigger automated corrective actions.
 
 ## Key Topics
 
-- Automated fault recovery
-- Signal aggregation layer
-- Fault detection patterns
-- Corrective action catalog
-- Risk classification of procedures
+- Fault classification
+- Automated corrective actions
+- Signal aggregation
+- Risk classification
+- One-click approval flows
 - Mean time to recovery (MTTR)
-- Observability integration
+- Action loop prevention
 - Root cause correlation
 
 ## Team & Metadata
