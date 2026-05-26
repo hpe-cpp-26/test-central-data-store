@@ -1,3 +1,4 @@
+---
 # autonomous-fault-recovery
 
 ## Group Overview
@@ -18,7 +19,9 @@ This document group contains technical design notes and related documentation fo
 - Risk classification  
 - Action types (safe, supervised, manual)  
 - Observability and auditability  
-- Mean time to recovery (MTTR) improvement
+- Mean time to recovery (MTTR) improvement  
+- Log anomaly patterns  
+- Distributed trace latency outliers  
 
 ## Team & Metadata
 
@@ -27,4 +30,5 @@ This document group contains technical design notes and related documentation fo
 | Team        | SRE                       |
 | Project     | autonomous-fault-recovery |
 | Status      | draft                     |
-| Last Updated| 2024-03-15                |
+| Last Updated| 2026-05-26                |
+---
