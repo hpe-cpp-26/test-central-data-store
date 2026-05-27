@@ -36,6 +36,9 @@ This document group contains technical design notes and related documentation fo
 - **Autonomous Fault Recovery — Design Notes** (Source: Confluence)  
   This document outlines the initial design for an autonomous fault recovery system aimed at automating responses to production degradations. The system will aggregate telemetry signals from Prometheus, logs, and distributed traces to detect anomalies like high CPU, memory pressure, and latency outliers. It proposes a catalogue of corrective procedures, including scaling out, circuit breaking, service restarts, and feature toggles, classified by risk for automatic or supervised execution. The primary goal is to reduce manual intervention and improve mean time to recovery for predictable incident patterns, ensuring an audit trail and rollback capability for all automated actions. Key considerations include preventing action loops, managing suppression windows, and correlating changes with fault signals.
 
+- **Resilient Async Coordination — Spike Notes** (Source: Confluence)  
+  This document details a spike for the async coordination project, focusing on resilient asynchronous workflow orchestration. It explores patterns like deadline propagation, ranked fallback, partial assembly, and suppression windows to improve response assembly rates during distributed provider degradation. The core functional domain is distributed systems resilience and data freshness, addressing challenges with varying latency and availability across providers. This is a design exploration and planning document for enhancing system robustness.
+
 ## Key Topics
 
 - Automated fault recovery  
@@ -85,6 +88,9 @@ This document group contains technical design notes and related documentation fo
 - Feature toggles  
 - Circuit breaking  
 - Rollback capability  
+- Orchestration  
+- Data freshness  
+- Distributed systems resilience  
 
 ## Team & Metadata
 
