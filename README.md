@@ -4,11 +4,6 @@ A Self-Healing System is a software architecture designed to autonomously detect
 ## The Core Loop (MAPE-K Framework)
 Self-healing architectures operate on a continuous loop called the MAPE-K model. This cycle allows the system to constantly evaluate its own state and adapt to issues in real time.
 
--- Monitor: The system collects metrics, logs, and traces (e.g., CPU load, memory usage, HTTP 5xx error rates, response latency) to establish a baseline of normal operation.
-
-Analyze: When a metric breaches a threshold, the system parses logs and health checks to isolate the root cause and determine if the failure is transient or systemic.
-
-Plan: The system consults its "knowledge base" (predefined rules, playbooks, or policies) to select the safest and most effective remediation strategy.
 
 Execute: The chosen action is deployed automatically to the live environment (e.g., terminating a container, scaling resources, or altering network routes).
 
