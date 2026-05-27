@@ -1,39 +1,44 @@
 # ML Training Pipeline — Experiment Tracking Design
 
-Dataset 
+An ML (Machine Learning) training pipeline is an automated, end-to-end workflow that transforms raw data into a deployable model. It standardizes the steps required to train and retrain models, ensuring reproducibility, consistency, and scalability.
 
-    ------------------
-    Training datasets are versioned using DVC and stored in object storage (S3).
-    Each dataset version is tagged with a schema hash to detect silent drift.
-    Splits (train / val / test) are fixed per version to ensure reproducibility
-    across experiment runs.
+Here is the breakdown of the core stages in a standard ML training pipeline, structured into 6 clear phases:
 
-    Experiment Tracking
-    -------------------
-    MLflow is used to log hyperparameters, metrics, and artefacts per run.
-    Each experiment is associated with a Git commit SHA and a dataset version tag.
-    Runs are grouped by model family (classification, ranking, embedding).
+1. Data Ingestion & Collection
+This is the starting point where raw data is gathered from various sources (databases, data lakes, APIs, streaming services, or logs) and consolidated into a centralized storage area.
 
-    Training Infrastructure
-    -----------------------
-    GPU jobs run on Kubernetes using the training operator. Resource quotas are
-    enforced per team. Spot instance interruptions are handled via checkpoint
-    resumption — jobs save state every 500 steps.
+Key Tasks: Syncing data sources, versioning the raw data, and handling streaming vs. batch ingestion.
 
-    Model Registry and Promotion
-    ----------------------------
-    Trained models are registered in MLflow Model Registry with stage labels:
-    Staging → Canary → Production. Promotion requires sign-off from a model
-    reviewer and passing evaluation against a held-out benchmark dataset.
+2. Data Cleaning & Preprocessing
+Raw data is rarely ready for a machine learning model. This stage cleans the data and structures it so the algorithm can interpret it correctly.
 
-    Serving
-    -------
-    Production models are served via Triton Inference Server behind an internal
-    gRPC gateway. Latency SLOs: P50 < 10ms, P99 < 50ms for embedding models.
-    Model versions are shadowed before full cutover to detect regression.
+Key Tasks: Handling missing values, removing duplicates, normalizing or scaling numerical values, and encoding categorical variables (e.g., one-hot encoding).
 
-    Monitoring
-    ----------
-    Feature drift is detected using PSI scores computed daily against the
-    training distribution. Alerts fire when PSI > 0.2 for any top-20 feature.
-    Prediction confidence histograms are logged per model per hour.
+3. Feature Engineering
+Feature engineering is the process of using domain knowledge to create new features (input variables) from raw data that help the ML model predict more accurately.
+
+Key Tasks: Extracting text embeddings, creating aggregations (e.g., average spend per month), or reducing dimensionality (using techniques like PCA).
+
+4. Model Training & Tuning
+Once the dataset is prepared, it is typically split into training, validation, and testing sets. The training data is fed into the machine learning algorithm to learn patterns.
+
+Key Tasks: * Running the training algorithm.
+
+Hyperparameter Tuning: Searching for the best configuration settings (like learning rate or tree depth) using methods like Grid Search or Bayesian Optimization.
+
+5. Model Evaluation & Validation
+Before a model goes anywhere near production, its performance must be rigorously tested on a "holdout" validation dataset it has never seen before.
+
+Key Tasks: Checking evaluation metrics (such as Accuracy, F1-Score, ROC-AUC, or MAE) and checking for signs of overfitting or underfitting.
+
+6. Model Registration & Deployment
+If the model passes evaluation, the trained model artifact (the weights and architecture) is saved to a Model Registry (like MLflow) along with its metadata and metrics. From there, it is packaged and pushed to a production environment.
+
+Key Tasks: Containerization (e.g., Docker), exposing the model via an API endpoint, and setting up monitoring for data drift.
+
+Why Use a Pipeline Instead of Scripts?
+Reproducibility: If your model's performance drops, you can rerun the exact same pipeline with the exact same parameters to find out why.
+
+Automation (CI/CD): When new data arrives, the pipeline can automatically trigger, retrain the model, and deploy an updated version without manual human intervention.
+
+Prevents Data Leakage: By separating steps cleanly, you ensure information from your test dataset doesn't accidentally leak into your training dataset.
