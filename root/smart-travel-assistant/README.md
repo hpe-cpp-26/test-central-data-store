@@ -1,3 +1,4 @@
+---
 # smart-travel-assistant
 
 This group of documents covers the design, development, and operational aspects of the Smart Travel Assistant platform. It encompasses various components, from core AI-powered planning engines to user-facing features and underlying infrastructure.
@@ -6,6 +7,7 @@ This group of documents covers the design, development, and operational aspects 
 
 *   AI-Powered Travel Planning and Itinerary Engine
 *   Travel Planning: Flight API Integration
+*   AI-Powered Travel Planning and Itinerary Engine
 
 ## Key Topics
 
@@ -29,3 +31,4 @@ This group of documents covers the design, development, and operational aspects 
 | **Project**    | smart-travel-assistant               |
 | **Status**     | active                               |
 | **Last Updated** | 2026-05-27                           |
+---
