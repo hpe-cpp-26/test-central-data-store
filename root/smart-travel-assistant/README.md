@@ -5,6 +5,7 @@ This group of documents covers the design, development, and operational aspects 
 ## Documents in this Group
 
 *   AI-Powered Travel Planning and Itinerary Engine
+*   Travel Planning: Flight API Integration
 
 ## Key Topics
 
@@ -18,6 +19,7 @@ This group of documents covers the design, development, and operational aspects 
 *   Kafka
 *   PostgreSQL
 *   Elasticsearch
+*   Flight API Integration
 
 ## Team & Metadata
 
