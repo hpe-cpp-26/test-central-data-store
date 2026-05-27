@@ -48,6 +48,9 @@ This document group contains technical design notes and related documentation fo
 - **Resilient Async Coordination — Spike Notes** (Source: Confluence)  
   The async coordination project aims to achieve resilient asynchronous workflow coordination across distributed providers with varying latency, availability, and data freshness. This involves exploring patterns such as deadline propagation, ranked fallback, partial assembly, and suppression windows to improve response assembly rates during provider degradation.
 
+- **Self-Healing System — Technical Documentation** (Source: GitHub)  
+  The self-healing system is a resilient distributed backend platform that automatically detects, diagnoses, and recovers from failures without manual intervention, featuring real-time service health monitoring, automated failure detection, self-recovery workflows, traffic rerouting, distributed logging, and failure simulation, with recovery actions including restarting unhealthy containers, rerouting traffic, activating fallback services, and rolling back failed deployments, designed to ensure high availability and reliability, with a focus on fault-tolerance and resilience.
+
 ## Key Topics
 
 - Automated fault recovery  
@@ -108,6 +111,8 @@ This document group contains technical design notes and related documentation fo
 - Predictable fault patterns  
 - Cascade failures  
 - Flag toggling  
+- Microservices  
+- Containerization  
 
 ## Team & Metadata
 
@@ -117,5 +122,3 @@ This document group contains technical design notes and related documentation fo
 | Project     | autonomous-fault-recovery |
 | Status      | draft                     |
 | Last Updated| 2026-05-27                |
----
----
