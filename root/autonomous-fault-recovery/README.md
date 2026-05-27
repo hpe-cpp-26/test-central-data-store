@@ -1,4 +1,3 @@
----
 # autonomous-fault-recovery
 
 ## Group Overview
@@ -45,6 +44,9 @@ This document group contains technical design notes and related documentation fo
 
 - **Autonomous Fault Recovery — Design Notes** (Source: Confluence)  
   The autonomous fault recovery project aims to reduce manual intervention during production degradations by introducing programmatic corrective actions triggered by telemetry signals. This capability focuses on reliability and automation, addressing predictable fault patterns such as high CPU, memory pressure, and cascade failures. The proposed approach involves a signal aggregation layer that maps metrics, logs, and trace anomalies to a catalogue of corrective procedures, including scaling, circuit breaking, restarting, and flag toggling. The goal is to achieve a reduction in mean time to recovery and fewer escalations to senior engineers, with an audit trail of automated actions and rollback capability.
+
+- **Resilient Async Coordination — Spike Notes** (Source: Confluence)  
+  The async coordination project aims to achieve resilient asynchronous workflow coordination across distributed providers with varying latency, availability, and data freshness. This involves exploring patterns such as deadline propagation, ranked fallback, partial assembly, and suppression windows to improve response assembly rates during provider degradation.
 
 ## Key Topics
 
@@ -115,4 +117,5 @@ This document group contains technical design notes and related documentation fo
 | Project     | autonomous-fault-recovery |
 | Status      | draft                     |
 | Last Updated| 2026-05-27                |
+---
 ---
