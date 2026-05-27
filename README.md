@@ -1,42 +1,27 @@
-# ML Training Pipeline — Experiment Tracking Design
-
-An ML (Machine Learning) training pipeline is an automated, end-to-end workflow that transforms raw data into a deployable model. It standardizes the steps required to train and retrain models, ensuring reproducibility, consistency, and scalability.
-
-Here is the breakdown of the core stages in a standard ML training pipeline, structured into 6 clear phases:
-
-1. Data Ingestion & Collection
-This is the starting point where raw data is gathered from various sources (databases, data lakes, APIs, streaming services, or logs) and consolidated into a centralized storage area.
-
-Key Tasks: Syncing data sources, versioning the raw data, and handling streaming vs. batch ingestion.
+# A self-healing system 
 
 
+## is an architecture designed to autonomously detect
 
-4. Model Training & Tuning
-Once the dataset is prepared, it is typically split into training, validation, and testing sets. The training data is fed into the machine learning algorithm to learn patterns.
+The architecture operates on a continuous feedback loop often referred to as the MAPE-K loop (Monitor, Analyze, Plan, Execute, Knowledge).
 
-Key Tasks: * Running the training algorithm.
+The 4 Core Stages of a Self-Healing Loop
+1. Automated Monitoring (Sense)
+The system continuously tracks health indicators across infrastructure, application performance, and logs. It establishes a baseline of what "normal" behavior looks like.
 
-Hyperparameter Tuning: Searching for the best configuration settings (like learning rate or tree depth) using methods like Grid Search or Bayesian Optimization.
+Key Metrics: CPU/Memory utilization, HTTP error rates (5xx status codes), database connection pools, and latency spikes.
 
-5. Model Evaluation & Validation
-Before a model goes anywhere near production, its performance must be rigorously tested on a "holdout" validation dataset it has never seen before.
+2. Failure Detection & Diagnosis (Analyze)
+When metrics breach predefined thresholds or display anomalous behavior, the system evaluates the root cause to determine if it is a transient glitch or a systemic failure.
 
-Key Tasks: Checking evaluation 
+Mechanism: Simple health check endpoints (/healthz) monitor liveness, while advanced log parsers use pattern matching to classify specific exceptions (e.g., Out Of Memory errors).
 
+3. Remediation Planning (Plan)
+Once the issue is classified, the system selects the appropriate playbook or automation script to resolve that exact failure vector while minimizing blast radius.
 
+Mechanism: Rule-based decision engines choose the appropriate script based on the error code, or safe deployment engines compute how to roll back a corrupted release.
 
-metrics (such as Accuracy, F1-Score, ROC-AUC, or MAE) and checking for signs of overfitting or underfitting.
+4. Automated Execution (Execute)
+The system executes the corrective action on the live environment and immediately verifies whether the system health returns to its normal baseline.
 
-6. Model Registration & Deplo
-7.
-8. yment
-If the model passes evaluation, the trained model artifact (the weights and architecture) is saved to a Model Registry (like MLflow) along with its metadata and metrics. From there, it is packaged and pushed to a production environment.
-
-Key Tasks: Containerization (e.g., Docker), exposing the model via an API endpoint, and setting up monitoring for data drift.
-
-Why Use a Pipeline Instead of Scripts?
-Reproducibility: If your model's performance drops, you can rerun the exact same pipeline with the exact same parameters to find out why.
-
-Automation (CI/CD): When new data arrives, the pipeline can automatically trigger, retrain the model, and deploy an updated version without manual human intervention.
-
-Prevents Data Leakage: By separating steps cleanly, you ensure information from your test dataset doesn't accidentally leak into your training dataset.
+Mechanism: Restarting a container, scaling up infrastructure, changing network routes, or executing a database failover.
