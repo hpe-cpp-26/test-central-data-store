@@ -9,15 +9,7 @@ This is the starting point where raw data is gathered from various sources (data
 
 Key Tasks: Syncing data sources, versioning the raw data, and handling streaming vs. batch ingestion.
 
-2. Data Cleaning & Preprocessing
-Raw data is rarely ready for a machine learning model. This stage cleans the data and structures it so the algorithm can interpret it correctly.
 
-Key Tasks: Handling missing values, removing duplicates, normalizing or scaling numerical values, and encoding categorical variables (e.g., one-hot encoding).
-
-3. Feature Engineering
-Feature engineering is the process of using domain knowledge to create new features (input variables) from raw data that help the ML model predict more accurately.
-
-Key Tasks: Extracting text embeddings, creating aggregations (e.g., average spend per month), or reducing dimensionality (using techniques like PCA).
 
 4. Model Training & Tuning
 Once the dataset is prepared, it is typically split into training, validation, and testing sets. The training data is fed into the machine learning algorithm to learn patterns.
@@ -29,9 +21,15 @@ Hyperparameter Tuning: Searching for the best configuration settings (like learn
 5. Model Evaluation & Validation
 Before a model goes anywhere near production, its performance must be rigorously tested on a "holdout" validation dataset it has never seen before.
 
-Key Tasks: Checking evaluation metrics (such as Accuracy, F1-Score, ROC-AUC, or MAE) and checking for signs of overfitting or underfitting.
+Key Tasks: Checking evaluation 
 
-6. Model Registration & Deployment
+
+
+metrics (such as Accuracy, F1-Score, ROC-AUC, or MAE) and checking for signs of overfitting or underfitting.
+
+6. Model Registration & Deplo
+7.
+8. yment
 If the model passes evaluation, the trained model artifact (the weights and architecture) is saved to a Model Registry (like MLflow) along with its metadata and metrics. From there, it is packaged and pushed to a production environment.
 
 Key Tasks: Containerization (e.g., Docker), exposing the model via an API endpoint, and setting up monitoring for data drift.
