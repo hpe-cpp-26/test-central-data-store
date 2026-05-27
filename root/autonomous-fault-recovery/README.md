@@ -135,8 +135,12 @@ This document group contains technical design notes and related documentation fo
 - **Resilient Async Coordination — Spike Notes** (Source: Confluence)  
   The async coordination project aims to achieve resilient asynchronous workflow coordination across distributed providers with varying latency, availability, and data freshness. This involves exploring patterns such as deadline propagation, ranked fallback, partial assembly, and suppression windows to improve response assembly rates during provider degradation.
 
-- **Resilient Async Coordination — Spike Notes** (Source: Confluence)  
-  The async coordination project aims to achieve resilient asynchronous workflow coordination across distributed providers with varying latency, availability, and data freshness. This involves exploring patterns such as deadline propagation, ranked fallback, partial assembly, and suppression windows to improve response assembly rates during provider degradation.
+- **Self-Healing System** (Source: Jira)  
+  The system is designed for automatic failure detection, management, and recovery, ensuring high reliability and uptime through continuous monitoring of services, applications, and infrastructure. It leverages automated mechanisms such as monitoring, alerting, fault detection, logging, backup recovery, and scaling to minimize downtime and maintain consistent service availability.
 
-- **Resilient Async Coordination — Spike Notes** (Source: Confluence)  
-  The async coordination project aims to achieve resilient asynchronous workflow coordination across distributed providers with varying
+## Key Topics
+
+- Autonomous Fault Recovery
+- Self-Healing Systems
+- Resilient Async Coordination
+- Distributed Systems Resilience
