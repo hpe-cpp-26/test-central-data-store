@@ -1,3 +1,4 @@
+---
 # ml-training-pipeline
 
 ## Group Overview
@@ -8,6 +9,8 @@ This document group contains technical documentation for the ML Training Pipelin
   Defines the architecture for dataset versioning, experiment tracking, model registry, and promotion workflows for production deployment.
 - **ML Training Pipeline — Experiment Tracking Design** (Source: Confluence)  
   This document outlines the architecture and design for a machine learning training and deployment pipeline. It covers dataset versioning using DVC and S3, experiment tracking with MLflow for logging hyperparameters, metrics, and artifacts, and a model registry for managing model lifecycle stages from staging to production. The pipeline supports GPU-accelerated training on Kubernetes with checkpointing for fault tolerance. It details model promotion workflows requiring review and benchmark evaluation. Production models are served via Triton Inference Server with gRPC, incorporating shadowing for safe deployments. Monitoring includes feature drift detection using PSI scores and prediction confidence logging to ensure model health and performance.
+- **ML Training Pipeline — Experiment Tracking Design** (Source: Confluence)  
+  The machine learning training pipeline project involves designing and implementing a data management system with dataset versioning, experiment tracking, and model registry. The system utilizes versioned training datasets, logs hyperparameters and metrics, and groups experiments by model family. It also enforces resource quotas, handles spot instance interruptions, and promotes trained models through staging, canary, and production stages. The project serves production models via an internal gateway, detects feature drift, and logs prediction confidence histograms.
 
 ## Key Topics
 - Dataset versioning
@@ -33,3 +36,4 @@ This document group contains technical documentation for the ML Training Pipelin
 | Project     | ml-training-pipeline   |
 | Status      | active                 |
 | Last Updated| 2026-05-27             |
+---
