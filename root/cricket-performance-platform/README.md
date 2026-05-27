@@ -8,6 +8,8 @@ This document group contains technical and analytical documentation for the Cric
 
 - **Cricket Match Analytics and Performance Engine** (Source: Jira)  
   Describes the architecture and functionality of the cricket performance platform, including data collection, analytics, and predictive modeling.
+- **Cricket Match Analytics and Performance Engine** (Source: Jira)  
+  This document outlines the architecture for a sports analytics platform focused on cricket. It details a data pipeline for ingesting live match events from various sources including scoring APIs, sensor feeds, ball tracking, and wearables. The core analytics engine processes player and team statistics such as batting strike rates, bowling economy, and fielding efficiency. It also generates predictive insights for win probability, player form, injury risk, and strategic optimizations like batting order and bowling rotations. Key infrastructure components include Kafka for streaming, PostgreSQL for persistent storage, Redis for caching, and Elasticsearch for indexing.
 
 ## Key Topics
 
@@ -19,6 +21,8 @@ This document group contains technical and analytical documentation for the Cric
 - Batting and bowling strategy optimization  
 - Injury risk estimation  
 - Fielding efficiency metrics
+- Win probability prediction
+- Data streaming with Kafka
 
 ## Team & Metadata
 
@@ -27,4 +31,4 @@ This document group contains technical and analytical documentation for the Cric
 | Team        | sports-analytics          |
 | Project     | cricket-performance-platform |
 | Status      | active                    |
-| Last Updated| 2025-05-27                |
+| Last Updated| 2026-05-27                |
