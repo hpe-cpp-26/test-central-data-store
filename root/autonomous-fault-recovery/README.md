@@ -31,7 +31,10 @@ This document group contains technical design notes and related documentation fo
   The Self-Healing System is a distributed backend platform designed to automatically detect, diagnose, and recover from failures without manual intervention. It continuously monitors services, identifies anomalies, and triggers automated recovery workflows to maintain platform stability. Key features include real-time health monitoring, traffic rerouting, fallback handling, distributed logging, and centralized observability. The system detects service crashes, database failures, network instability, and resource exhaustion. Recovery actions include restarting containers, rerouting traffic, activating fallback services, scaling dynamically, and clearing stuck queues. It supports failure simulation through chaos testing, network partition simulation, and dependency timeout injection. The system is built for fault tolerance, resilience, and high availability in distributed infrastructure.
 
 - **Threat Intelligence Correlation Engine** (Source: Jira)  
-  This document describes the design for a cybersecurity threat intelligence correlation engine used to aggregate indicators of compromise (IOCs), enrich attack telemetry, and generate risk-scored security incidents. It processes security events from endpoint agents, SIEM feeds, firewall logs, and cloud audit streams. The system correlates IP reputation matches, malware hash signatures, suspicious authentication patterns, geographic login anomalies, and privilege escalation chains. It supports automated response actions such as disabling compromised accounts, isolating infected endpoints, revoking API tokens, and blocking malicious IP ranges. The infrastructure includes Kafka for streaming, Elasticsearch for telemetry indexing, and Redis for IOC caching. This system is part of the threat intelligence platform and is used for incident response and security automation.
+  This document describes the design for a cybersecurity threat intelligence correlation engine used to aggregate indicators of compromise (IOCs), enrich attack telemetry, and generate risk-scored security incidents. It processes security events from endpoint agents, SIEM feeds, firewall logs, and cloud audit streams. The system correlates IP reputation matches, malware hash signatures, suspicious authentication patterns, geographic login anomalies, and privilege escalation chains. It supports automated response actions suchs as disabling compromised accounts, isolating infected endpoints, revoking API tokens, and blocking malicious IP ranges. The infrastructure includes Kafka for streaming, Elasticsearch for telemetry indexing, and Redis for IOC caching. This system is part of the threat intelligence platform and is used for incident response and security automation.
+
+- **Autonomous Fault Recovery — Design Notes** (Source: Confluence)  
+  This document outlines the initial design for an autonomous fault recovery system aimed at automating responses to production degradations. The system will aggregate telemetry signals from Prometheus, logs, and distributed traces to detect anomalies like high CPU, memory pressure, and latency outliers. It proposes a catalogue of corrective procedures, including scaling out, circuit breaking, service restarts, and feature toggles, classified by risk for automatic or supervised execution. The primary goal is to reduce manual intervention and improve mean time to recovery for predictable incident patterns, ensuring an audit trail and rollback capability for all automated actions. Key considerations include preventing action loops, managing suppression windows, and correlating changes with fault signals.
 
 ## Key Topics
 
@@ -78,6 +81,10 @@ This document group contains technical design notes and related documentation fo
 - Incident response  
 - SIEM integration  
 - IOC aggregation  
+- Corrective procedures  
+- Feature toggles  
+- Circuit breaking  
+- Rollback capability  
 
 ## Team & Metadata
 
@@ -86,4 +93,4 @@ This document group contains technical design notes and related documentation fo
 | Team        | SRE                       |
 | Project     | autonomous-fault-recovery |
 | Status      | draft                     |
-| Last Updated| 2026-05-26                |
+| Last Updated| 2026-05-27                |
