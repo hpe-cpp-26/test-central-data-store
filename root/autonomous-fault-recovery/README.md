@@ -55,6 +55,24 @@ This document group contains technical design notes and related documentation fo
 - **Autonomous Fault Recovery — Design Notes** (Source: Confluence)  
   The autonomous fault recovery project aims to reduce manual intervention during production degradations by introducing programmatic corrective actions triggered by telemetry signals. This capability focuses on reliability and automation, addressing predictable fault patterns such as high CPU, memory pressure, and downstream timeouts. The proposed approach involves a signal aggregation layer that maps metrics, logs, and trace anomalies to a catalogue of corrective procedures, including scaling, circuit breaking, restarting, and flag toggling. The goal is to achieve a reduction in mean time to recovery and fewer escalations to senior engineers, with an audit trail of automated actions and rollback capability.
 
+- **Resilient Async Coordination — Spike Notes** (Source: Confluence)  
+  This document details a spike for the async coordination project, focusing on resilient asynchronous workflow orchestration. It explores patterns like deadline propagation, ranked fallback, partial assembly, and suppression windows to improve response assembly rates during distributed provider degradation. The core functional domain is distributed systems resilience and data freshness, addressing challenges with varying latency and availability across providers. This is a design exploration and planning document for enhancing system robustness.
+
+- **Self-Healing System — Technical Documentation** (Source: GitHub)  
+  This document describes the architecture and functionality of a platform designed for automated system resilience. It focuses on real-time health monitoring, automated failure detection, and self-recovery workflows for distributed backend services. Key capabilities include restarting unhealthy containers, rerouting traffic, activating fallback services, and rolling back failed deployments. The system aims to provide fault tolerance and high availability through proactive and reactive self-healing mechanisms, minimizing manual intervention in incident response. It covers concepts like distributed logging and failure simulation to enhance system robustness.
+
+- **Autonomous Fault Recovery — Design Notes** (Source: Confluence)  
+  The autonomous fault recovery project aims to reduce manual intervention during production degradations by introducing programmatic corrective actions triggered by telemetry signals. This capability focuses on reliability and automation, addressing predictable fault patterns such as high CPU, memory pressure, and cascade failures. The proposed approach involves a signal aggregation layer that maps metrics, logs, and trace anomalies to a catalogue of corrective procedures, including scaling, circuit breaking, restarting, and flag toggling. The goal is to achieve a reduction in mean time to recovery and fewer escalations to senior engineers, with an audit trail of automated actions and rollback capability.
+
+- **Resilient Async Coordination — Spike Notes** (Source: Confluence)  
+  The async coordination project aims to achieve resilient asynchronous workflow coordination across distributed providers with varying latency, availability, and data freshness. This involves exploring patterns such as deadline propagation, ranked fallback, partial assembly, and suppression windows to improve response assembly rates during provider degradation.
+
+- **Self-Healing System — Technical Documentation** (Source: GitHub)  
+  The self-healing system is a resilient distributed backend platform that automatically detects, diagnoses, and recovers from failures without manual intervention, featuring real-time service health monitoring, automated failure detection, self-recovery workflows, traffic rerouting, distributed logging, and failure simulation. This system enables restart of unhealthy containers, rerouting of traffic, activation of fallback services, and roll back of failed deployments. The system is designed for fault-tolerance and high availability, utilizing distributed architecture and automated workflows. The project focuses on reliability and resilience, with key entities including service health monitoring, failure detection, and traffic management. The document provides technical documentation for the system, outlining its features, recovery actions, and design principles.
+
+- **Self-Healing System — Technical Documentation** (Source: GitHub)  
+  The self-healing system is a resilient distributed backend platform that automatically detects, diagnoses, and recovers from failures without manual intervention, featuring real-time service health monitoring, automated failure detection, self-recovery workflows, traffic rerouting, distributed logging, and failure simulation, with recovery actions including restarting unhealthy containers, rerouting traffic, activating fallback services, and rolling back failed deployments, designed to ensure high availability and reliability, with a focus on fault-tolerance and resilience.
+
 ## Key Topics
 
 - Automated fault recovery  
@@ -127,4 +145,5 @@ This document group contains technical design notes and related documentation fo
 | Project     | autonomous-fault-recovery |
 | Status      | draft                     |
 | Last Updated| 2026-05-27                |
+---
 ---
