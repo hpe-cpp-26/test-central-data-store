@@ -1,3 +1,4 @@
+---
 # autonomous-fault-recovery
 
 ## Group Overview
@@ -50,6 +51,9 @@ This document group contains technical design notes and related documentation fo
 
 - **Self-Healing System — Technical Documentation** (Source: GitHub)  
   The self-healing system is a resilient distributed backend platform that automatically detects, diagnoses, and recovers from failures without manual intervention, featuring real-time service health monitoring, automated failure detection, self-recovery workflows, traffic rerouting, distributed logging, and failure simulation, with recovery actions including restarting unhealthy containers, rerouting traffic, activating fallback services, and rolling back failed deployments, designed to ensure high availability and reliability, with a focus on fault-tolerance and resilience.
+
+- **Autonomous Fault Recovery — Design Notes** (Source: Confluence)  
+  The autonomous fault recovery project aims to reduce manual intervention during production degradations by introducing programmatic corrective actions triggered by telemetry signals. This capability focuses on reliability and automation, addressing predictable fault patterns such as high CPU, memory pressure, and downstream timeouts. The proposed approach involves a signal aggregation layer that maps metrics, logs, and trace anomalies to a catalogue of corrective procedures, including scaling, circuit breaking, restarting, and flag toggling. The goal is to achieve a reduction in mean time to recovery and fewer escalations to senior engineers, with an audit trail of automated actions and rollback capability.
 
 ## Key Topics
 
@@ -113,6 +117,7 @@ This document group contains technical design notes and related documentation fo
 - Flag toggling  
 - Microservices  
 - Containerization  
+- Downstream timeouts  
 
 ## Team & Metadata
 
@@ -122,3 +127,4 @@ This document group contains technical design notes and related documentation fo
 | Project     | autonomous-fault-recovery |
 | Status      | draft                     |
 | Last Updated| 2026-05-27                |
+---
