@@ -24,8 +24,7 @@ Before a model goes anywhere near production, its performance must be rigorously
 
 Key Tasks: Checking evaluation metrics (such as Accuracy, F1-Score, ROC-AUC, or MAE) and checking for signs of overfitting or underfitting.
 
-6. Model Registration & Deployment
-If the model passes evaluation, the trained model artifact (the weights and architecture) is saved to a Model Registry (like MLflow) along with its metadata and metrics. From there, it is packaged and pushed to a production environment.
+##tesitng again
 
 Key Tasks: Containerization (e.g., Docker), exposing the model via an API endpoint, and setting up monitoring for data drift.
 
