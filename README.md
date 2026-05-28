@@ -1,17 +1,18 @@
 # ML Training Pipeline — Experiment Tracking Design
 
+## Data Ingestion & Collection
 An ML (Machine Learning) training pipeline is an automated, end-to-end workflow that transforms raw data into a deployable model. It standardizes the steps required to train and retrain models, ensuring reproducibility, consistency, and scalability.
 
 Here is the breakdown of the core stages in a standard ML training pipeline, structured into 6 clear phases:
 
-1. Data Ingestion & Collection
+
 This is the starting point where raw data is gathered from various sources (databases, data lakes, APIs, streaming services, or logs) and consolidated into a centralized storage area.
 
 Key Tasks: Syncing data sources, versioning the raw data, and handling streaming vs. batch ingestion.
 
 
 
-4. Model Training & Tuning
+4. Model Training
 Once the dataset is prepared, it is typically split into training, validation, and testing sets. The training data is fed into the machine learning algorithm to learn patterns.
 
 Key Tasks: * Running the training algorithm.
