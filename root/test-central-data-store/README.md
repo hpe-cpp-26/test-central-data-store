@@ -1,13 +1,13 @@
 # test-central-data-store
 
-## Group Overview
+## Group Overview  
 This document group contains technical documentation related to the `test-central-data-store` project, which focuses on the design and implementation of a centralized data repository for testing machine learning workflows. The group supports structured data ingestion, model training, and deployment processes, with an emphasis on reproducibility and scalability.
 
-## Documents in this Group
+## Documents in this Group  
 - **test-central-data-store** (Source: GitHub)  
   Describes the design of an ML training pipeline focused on experiment tracking and data ingestion, including stages for data preparation, model training, evaluation, and deployment.
 
-## Key Topics
+## Key Topics  
 - Data ingestion workflow  
 - Model training pipeline  
 - Hyperparameter tuning  
@@ -17,7 +17,7 @@ This document group contains technical documentation related to the `test-centra
 - CI/CD for ML retraining  
 - Data leakage prevention  
 
-## Team & Metadata
+## Team & Metadata  
 
 | Field       | Value |
 |-------------|-------|
