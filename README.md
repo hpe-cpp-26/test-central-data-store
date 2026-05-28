@@ -14,8 +14,7 @@ This is the starting point where raw data is gathered from various sources (data
 
 4. Model Training
 Once the dataset is prepared, it is typically split into training, validation, and testing sets. The training data is fed into the machine learning algorithm to learn patterns.
-
-Key Tasks: * Running the training algorithm.
+updateddd
 
 Hyperparameter Tuning: Searching for the best configuration settings (like learning rate or tree depth) using methods like Grid Search or Bayesian Optimization.
 
