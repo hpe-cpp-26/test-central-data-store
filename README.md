@@ -8,7 +8,7 @@ Here is the breakdown of the core stages in a standard ML training pipeline, str
 
 This is the starting point where raw data is gathered from various sources (databases, data lakes, APIs, streaming services, or logs) and consolidated into a centralized storage area.
 
-Key Tasks: Syncing data sources, versioning the raw data, and handling streaming vs. batch ingestion.
+## Key Tasks: Syncing data sources, versioning the raw data, and handling streaming vs. batch ingestion.
 
 
 
