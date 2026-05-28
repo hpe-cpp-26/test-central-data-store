@@ -1,22 +1,21 @@
 # test-central-data-store
 
 ## Group Overview  
-This document group contains resources related to the `test-central-data-store`, a central repository designed to manage and organize test data. It serves as a foundational component for test data management, supporting structured storage, retrieval, and integration into testing workflows.
+This document group contains resources related to the `test-central-data-store`, a central repository designed for testing purposes. It serves as a foundational data store for test-related information and supports centralized data management and test infrastructure.
 
 ## Documents in this Group  
-- **test-central-data-store** (Source: GitHub) – Describes a central repository for testing data, serving as a foundational component for test data management.
+- **test-central-data-store** (Source: GitHub) – Describes a central repository for testing, providing implementation guidance for structure and usage.
 
 ## Key Topics  
-- Test data management  
-- Centralized data repository  
-- Test execution workflows  
-- Data storage and retrieval  
-- Test validation processes  
-- Configuration practices  
-- Integration with testing systems  
-- Scalable testing infrastructure  
+- Centralized data management  
+- Test infrastructure  
+- Repository structure  
+- Data integrity  
+- Test workflows  
+- Documentation updates  
+- Implementation guidance  
 
 ## Team & Metadata  
 | Team | Project | Status | Last Updated |
 |------|---------|--------|--------------|
-| QA Engineering | Test Data Management Initiative | Active | 2026-05-28 |
+| test-central-data-store | test-central-data-store | Active | 2026-05-28 |
