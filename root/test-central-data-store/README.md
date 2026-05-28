@@ -1,26 +1,26 @@
 # test-central-data-store
 
 ## Group Overview
-This document group contains resources related to the `test-central-data-store`, a central repository designed for testing purposes. It serves as a foundational data store for test-related information and is used to organize and manage test data within a test infrastructure.
+This document group contains technical documentation related to the `test-central-data-store` project, which focuses on the design and implementation of a centralized data repository for testing machine learning models. The group includes documentation on data ingestion, model training, evaluation, deployment, and lifecycle management, with an emphasis on reproducibility, automation, and system validation.
 
 ## Documents in this Group
-- **test-central-data-store** (Source: GitHub) – A central repository for test data, providing an implementation guide for setup and usage of the test data store.
+- **test-central-data-store** (Source: GitHub) — Describes the design of an ML training pipeline focused on experiment tracking and model lifecycle management, covering data ingestion, model training, evaluation, and deployment.
 
 ## Key Topics
-- Central data repository  
-- Test data management  
-- Testing infrastructure  
-- Data storage systems  
-- Repository setup  
-- Test infrastructure organization  
-- Implementation guides  
-- Test repository configuration
+- ML training pipeline
+- Experiment tracking
+- Model lifecycle management
+- Data ingestion
+- Hyperparameter tuning
+- Model evaluation metrics
+- Model deployment
+- Data leakage prevention
 
 ## Team & Metadata
 
-| Field       | Value |
-|-------------|-------|
-| Team        | hpe-cpp-26 |
-| Project     | test-central-data-store |
-| Status      | In progress |
-| Last Updated | 2026-05-28 |
+| Field       | Value                          |
+|-------------|--------------------------------|
+| Team        | Machine Learning Engineering   |
+| Project     | test-central-data-store        |
+| Status      | Active                         |
+| Last Updated| 2026-05-28                     |
