@@ -1,25 +1,21 @@
 # test-central-data-store
 
-## Group Overview
-This document group contains resources related to the `test-central-data-store`, a central repository designed to manage and provide test data for consistent validation across development and quality assurance workflows. It supports both automated and manual testing efforts and is part of a larger initiative focused on test infrastructure and quality assurance.
+## Group Overview  
+This document group contains resources related to the `test-central-data-store`, a central repository designed for managing and organizing test data. It provides implementation guidance for developers and testers, focusing on data storage, ingestion, and consistency across testing environments.
 
-## Documents in this Group
-- **test-central-data-store** (Source: GitHub) – Central repository for test data, supporting consistent validation across development and QA workflows.
+## Documents in this Group  
+- **test-central-data-store** (Source: GitHub) – Describes a central repository for testing purposes, including updates to the data ingestion process and the addition of a test identifier 'testing 22'.
 
-## Key Topics
-- Centralized test data management  
-- Test data consistency  
-- Quality assurance workflows  
-- Automated testing integration  
-- Data integrity and accessibility  
-- Test infrastructure development  
-- Shared test data source  
-- Test framework compatibility
+## Key Topics  
+- Data ingestion pipeline  
+- Central data storage  
+- Test data management  
+- Testing environment consistency  
+- Implementation guidance  
+- Repository updates and modifications  
+- Test identifier integration  
 
-## Team & Metadata
-| Field       | Value |
-|-------------|-------|
-| Team        | Test Infrastructure |
-| Project     | test-central-data-store |
-| Status      | Active Development |
-| Last Updated | 2026-05-28 |
+## Team & Metadata  
+| Team         | Project                  | Status       | Last Updated         |
+|--------------|--------------------------|--------------|----------------------|
+| hpe-cpp-26   | test-central-data-store  | In Progress  | 2026-05-28 13:15 UTC |
