@@ -12,7 +12,7 @@ This is the starting point where raw data is gathered from various sources (data
 
 
 
-## Model Training
+## Model Training updated testing
 Once the dataset is prepared, it is typically split into training, validation, and testing sets. The training data is fed into the machine learning algorithm to learn patterns.
 updateddd
 write access provided
