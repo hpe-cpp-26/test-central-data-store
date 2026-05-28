@@ -9,6 +9,9 @@ This document group contains technical documentation related to the `test-centra
 - **test-central-data-store** (Source: GitHub)  
   A comprehensive technical reference for distributed systems engineering, covering foundational concepts, consensus algorithms, distributed storage, message queues, service mesh, and data replication strategies.
 
+- **test-github-data-ingestion** (Source: GitHub)  
+  A detailed guide to a self-healing distributed system designed for cloud-native environments, covering automated failure detection, real-time monitoring, load balancing, intelligent recovery, and microservices architecture. It includes implementation details for API gateways, order and payment services, inventory management, and a healing engine, with technologies like Docker, Kubernetes, Kafka/RabbitMQ, Prometheus, Grafana, and PostgreSQL.
+
 ## Key Topics
 
 - Distributed systems architecture  
@@ -19,6 +22,8 @@ This document group contains technical documentation related to the `test-centra
 - Consistent hashing  
 - Event sourcing  
 - Microservices observability  
+- Self-healing systems  
+- Automated failure recovery  
 
 ## Team & Metadata
 
