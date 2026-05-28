@@ -1,26 +1,20 @@
 # test-central-data-store
 
 ## Group Overview  
-This document group covers the `test-central-data-store` project, a central repository designed for managing and testing machine learning training pipelines. It provides documentation on system design, data management, and deployment workflows, serving as a reference for teams involved in model development and infrastructure.
+This document group covers the `test-central-data-store`, a centralized repository designed to manage and organize test data for testing workflows. It serves as a foundational data store within a broader testing infrastructure, supporting test execution and integration with testing systems.
 
 ## Documents in this Group  
-- **test-central-data-store** (Source: GitHub) — Describes the design of an ML training pipeline focused on experiment tracking and model deployment, covering data ingestion, model training, hyperparameter tuning, evaluation, and deployment.
+- **test-central-data-store** (Source: GitHub) - Describes a central repository for testing, serving as a foundational data store for test operations.
 
 ## Key Topics  
-- ML training pipeline  
-- Experiment tracking  
-- Model deployment  
-- Data ingestion  
-- Hyperparameter tuning  
-- Model evaluation  
-- Model versioning  
-- API deployment  
+- Centralized test data management  
+- Test repository architecture  
+- Testing infrastructure integration  
+- Data storage and accessibility  
+- Test execution workflows  
+- Repository configuration  
 
 ## Team & Metadata  
-
-| Field       | Value                          |
-|-------------|--------------------------------|
-| Team        | Machine Learning Engineering   |
-| Project     | test-central-data-store        |
-| Status      | Active                         |
-| Last Updated| 2026-05-28                     |
+| Team | Project | Status | Last Updated |
+|------|---------|--------|--------------|
+| Testing Infrastructure | test-central-data-store | Active | 2026-05-28 |
