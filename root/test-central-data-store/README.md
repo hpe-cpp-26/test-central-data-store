@@ -1,25 +1,26 @@
 # test-central-data-store
 
 ## Group Overview
-This document group contains resources related to the `test-central-data-store`, a central repository designed to manage and store test data throughout the project lifecycle. It supports test automation, validation workflows, and integration with CI/CD pipelines to ensure consistent and reliable test environments.
+This document group contains resources related to the `test-central-data-store`, a central repository designed to manage and store test data throughout the project lifecycle. It supports test automation, validation workflows, and ensures consistent test environments.
 
 ## Documents in this Group
-- **test-central-data-store** (Source: GitHub) - Central repository for managing test data and supporting test automation workflows.
+- **test-central-data-store** (Source: GitHub) – Describes a central data repository for managing test data, supporting automation and validation workflows.
 
 ## Key Topics
 - Test data management  
-- Test automation workflows  
-- Continuous integration  
+- Test automation  
+- Validation workflows  
+- Centralized data storage  
 - Test environment consistency  
-- Quality assurance practices  
-- Test-driven development  
-- Data repository design  
-- CI/CD pipeline integration
+- Testing infrastructure  
+- Test coverage improvement  
+- Data repository design
 
 ## Team & Metadata
+
 | Field       | Value                          |
 |-------------|--------------------------------|
-| Team        | QA Engineering                 |
+| Team        | hpe-cpp-26                     |
 | Project     | test-central-data-store        |
 | Status      | Active                         |
 | Last Updated| 2026-05-28                     |
