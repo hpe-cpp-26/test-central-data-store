@@ -1,26 +1,22 @@
 # test-central-data-store
 
 ## Group Overview
-This document group contains technical documentation related to the `test-central-data-store` project, which focuses on the design and implementation of a centralized data repository for testing machine learning models. The group includes documentation on data ingestion, model training, evaluation, deployment, and lifecycle management, with an emphasis on reproducibility, automation, and system validation.
+This document group contains resources related to the `test-central-data-store`, a central repository designed to manage and organize test data in a consistent and accessible manner. It serves as a foundational data store for test operations and supports testing workflows across environments.
 
 ## Documents in this Group
-- **test-central-data-store** (Source: GitHub) — Describes the design of an ML training pipeline focused on experiment tracking and model lifecycle management, covering data ingestion, model training, evaluation, and deployment.
+- **test-central-data-store** (Source: GitHub) – Describes a central repository for testing, serving as a foundational data store for test operations.
 
 ## Key Topics
-- ML training pipeline
-- Experiment tracking
-- Model lifecycle management
-- Data ingestion
-- Hyperparameter tuning
-- Model evaluation metrics
-- Model deployment
-- Data leakage prevention
+- Centralized test data management  
+- Test repository architecture  
+- Test data consistency  
+- Testing workflows  
+- Data accessibility  
+- Test infrastructure  
+- Repository integration  
+- Test environment support  
 
 ## Team & Metadata
-
-| Field       | Value                          |
-|-------------|--------------------------------|
-| Team        | Machine Learning Engineering   |
-| Project     | test-central-data-store        |
-| Status      | Active                         |
-| Last Updated| 2026-05-28                     |
+| Team | Project | Status | Last Updated |
+|------|---------|--------|--------------|
+| QA Engineering | test-central-data-store | Active | 2026-05-28 |
