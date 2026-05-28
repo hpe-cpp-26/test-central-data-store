@@ -29,9 +29,5 @@ If the model passes evaluation, the trained model artifact (the weights and arch
 
 Key Tasks: Containerization (e.g., Docker), exposing the model via an API endpoint, and setting up monitoring for data drift.
 
-Why Use a Pipeline Instead of Scripts?
-Reproducibility: If your model's performance drops, you can rerun the exact same pipeline with the exact same parameters to find out why.
-
-Automation (CI/CD): When new data arrives, the pipeline can automatically trigger, retrain the model, and deploy an updated version without manual human intervention.
-
+testing 
 Prevents Data Leakage: By separating steps cleanly, you ensure information from your test dataset doesn't accidentally leak into your training dataset.
