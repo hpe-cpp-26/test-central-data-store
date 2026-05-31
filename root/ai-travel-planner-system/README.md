@@ -1,3 +1,4 @@
+---
 # ai-travel-planner-system
 
 ## Group Overview
@@ -5,6 +6,7 @@ This document group contains project documentation related to the AI-Driven Trav
 
 ## Documents in this Group
 - **test-github-data-ingestion** (Source: GitHub) - Introduces the AI-Driven Travel Planner Agent System, a multi-agent distributed platform for automated, hyper-personalized travel planning.
+- **Langraph in Ai Travel Planner** (Source: Confluence) - Outlines the design of an AI-powered travel planning system that uses LangChain and LangGraph to manage dynamic itinerary creation, including multi-city planning, real-time constraint adaptation, and recovery from API failures.
 
 ## Key Topics
 - Multi-agent system architecture  
@@ -15,6 +17,8 @@ This document group contains project documentation related to the AI-Driven Trav
 - Fault-tolerant design  
 - Unified booking aggregation  
 - User preference modeling  
+- LangChain and LangGraph integration  
+- Stateful architecture and memory persistence  
 
 ## Team & Metadata
 
@@ -23,4 +27,5 @@ This document group contains project documentation related to the AI-Driven Trav
 | Team        | AI Travel Planning Platform |
 | Project     | AI-Driven Travel Planner Agent System |
 | Status      | In Development |
-| Last Updated | 2026-05-29 |
+| Last Updated | 2026-05-31 |
+---
