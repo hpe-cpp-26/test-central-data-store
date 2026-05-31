@@ -9,6 +9,9 @@ This document group contains technical documentation related to a self-healing d
 - **test-github-data-ingestion** (Source: GitHub)  
   Describes a self-healing distributed system built with microservices, automated recovery, real-time monitoring, and fault tolerance strategies.
 
+- **test-github-data-ingestion** (Source: GitHub)  
+  Describes the implementation of a self-healing system using Kubernetes, focusing on automated failure detection and recovery. The system leverages Kubernetes' declarative model and control loops to maintain the desired state of applications. Key mechanisms include liveness, readiness, and startup probes to monitor container health and trigger automatic restarts or traffic routing adjustments. Workload controllers such as ReplicaSet, Deployment, StatefulSet, and DaemonSet ensure consistent pod availability and rescheduling across node failures. Node-level self-healing is managed by the Node Controller, which evicts pods from unhealthy nodes and reschedules them. Resource management strategies like CPU and memory limits, Pod Disruption Budgets, and Horizontal Pod Autoscaling help maintain system stability under load. The system integrates observability tools like Prometheus and Grafana to provide visibility into health metrics and support tuning of self-healing policies. Best practices include defining probes for all containers, setting resource limits, and testing failure scenarios to validate recovery behavior. The document serves as an implementation guide for deploying resilient, scalable applications in a Kubernetes environment.
+
 ## Key Topics
 
 - Self-healing mechanisms  
@@ -19,6 +22,8 @@ This document group contains technical documentation related to a self-healing d
 - Cloud-native deployment  
 - Load balancing  
 - Event-driven communication  
+- Kubernetes control loops  
+- Container health probes  
 
 ## Team & Metadata
 
@@ -27,4 +32,4 @@ This document group contains technical documentation related to a self-healing d
 | Team        | hpe-cpp-26 |
 | Project     | test-github-data-ingestion |
 | Status      | Active |
-| Last Updated | 2026-05-28 |
+| Last Updated | 2026-05-31 |
