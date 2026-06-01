@@ -15,6 +15,9 @@ This document group contains technical documentation related to a self-healing d
 - **circuit breakers in self healing system** (Source: Confluence)  
   Describes the implementation of circuit breakers as a core mechanism for self-healing in distributed systems. It outlines the three operational states of a circuit breaker—closed, open, and half-open—and explains how they prevent cascading failures by managing request flow during service degradation. The document emphasizes strategies for self-healing, including dynamic failure thresholds, sliding time windows for metrics tracking, and graceful fallback responses to maintain user experience during outages. It also highlights the importance of real-time monitoring and telemetry integration with tools like Prometheus and Grafana to detect and respond to circuit state changes. The goal is to build resilient systems that automatically adapt to failures without manual intervention.
 
+- **Pod Recovery in Self-Healing Kubernetes** (Source: Confluence)  
+  Describes the automated process of pod recovery in Kubernetes-based self-healing systems. It explains how the system detects unhealthy or failed containers and automatically recreates them to maintain the desired state of an application. The document covers the core control loop mechanism, detection strategies using node-level and container-level health probes, and the recovery workflow including local container restarts and rescheduling to different nodes. It also discusses key policies like CrashLoopBackOff and replication controllers that ensure safe and effective recovery actions. The goal is to reduce manual intervention and maintain application availability in dynamic cloud environments.
+
 ## Key Topics
 
 - Self-healing mechanisms  
@@ -30,6 +33,8 @@ This document group contains technical documentation related to a self-healing d
 - Circuit breaker patterns  
 - Graceful fallback strategies  
 - Dynamic failure thresholds  
+- Pod rescheduling  
+- CrashLoopBackOff policies  
 
 ## Team & Metadata
 
