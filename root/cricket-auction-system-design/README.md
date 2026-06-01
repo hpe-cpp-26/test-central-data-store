@@ -6,6 +6,8 @@ This document group contains technical documentation for the Cricket Auction Sys
 ## Documents in this Group
 - **Cricket Auction System Documentation** (Source: Confluence)  
   A comprehensive overview of the system architecture, data models, and logic for managing real-time player bidding, squad management, and financial constraints.
+- **Auction System implementation** (Source: Confluence)  
+  An implementation guide covering data storage choices, concurrency management, real-time communication, and core backend logic for the Cricket Auction System.
 
 ## Key Topics
 - Real-time bidding
@@ -16,6 +18,8 @@ This document group contains technical documentation for the Cricket Auction Sys
 - Concurrency control
 - Player status transitions
 - Bid increment rules
+- Database schema design
+- Distributed locking
 
 ## Team & Metadata
 
