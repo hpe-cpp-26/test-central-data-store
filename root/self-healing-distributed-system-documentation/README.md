@@ -15,6 +15,10 @@ This document group contains technical documentation related to a self-healing d
   **Source Tool**: confluence  
   **Summary**: This document describes the implementation of circuit breakers as a core mechanism in a self-healing distributed system. It outlines the three operational states of a circuit breaker—closed, open, and half-open—and explains how these states manage request routing and failure recovery. The document emphasizes the importance of dynamic failure thresholds, sliding time windows for metrics tracking, and graceful fallback strategies to maintain system availability during service degradation. It also highlights the integration of circuit breakers with monitoring and telemetry tools like Prometheus and Grafana to provide real-time visibility into system health and failure patterns. The goal is to build a resilient architecture that automatically adapts to failures without cascading them across the system.
 
+- **Title**: test-github-data-ingestion  
+  **Source Tool**: github  
+  **Summary**: This document defines the functional and non-functional requirements for a self-healing distributed system. The system must automatically detect and recover from node failures, process crashes, and resource exhaustion using heartbeat protocols, anomaly detection, and fault metric logging. It includes automated recovery mechanisms such as process restart, node re-provisioning, and state reconciliation. The system must support traffic failover, circuit breaking, and rate limiting to maintain stability during failures. It must provide administration controls like manual override and real-time alerts. Non-functional requirements include 99.99% availability, 5-second failure detection, 2-second process recovery, and 60-second node recovery. The system must scale to 1,000 nodes with 2% CPU overhead, ensure zero data loss with replication factor 3, and enforce secure node joining and role-based access control. The codebase must be modular and cloud-agnostic.
+
 ## Key Topics
 
 - Self-healing mechanisms  
@@ -35,4 +39,4 @@ This document group contains technical documentation related to a self-healing d
 | Team        | N/A   |
 | Project     | test-github-data-ingestion |
 | Status      | Active |
-| Last Updated | 2026-06-04 |
+| Last Updated | 2026-06-08 |
