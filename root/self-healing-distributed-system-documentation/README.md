@@ -1,4 +1,3 @@
----
 # self-healing-distributed-system-documentation
 
 ## Group Overview
@@ -19,7 +18,11 @@ This document group contains technical documentation related to a self-healing d
   **Source Tool**: github  
   **Summary**: This document defines the functional and non-functional requirements for a self-healing distributed system. The system must automatically detect and recover from node failures, process crashes, and resource exhaustion using heartbeat protocols, anomaly detection, and fault metric logging. It includes automated recovery mechanisms such as process restart, node re-provisioning, and state reconciliation. The system must support traffic failover, circuit breaking, and rate limiting to maintain stability during failures. It must provide administration controls like manual override and real-time alerts. Non-functional requirements include 99.99% availability, 5-second failure detection, 2-second process recovery, and 60-second node recovery. The system must scale to 1,000 nodes with 2% CPU overhead, ensure zero data loss with replication factor 3, and enforce secure node joining and role-based access control. The codebase must be modular and cloud-agnostic.
 
-## Key Topics
+- **Title**: pod-recovery-in-self-healing-kubernetes  
+  **Source Tool**: confluence  
+  **Summary**: Pod recovery is a core mechanism in self-healing Kubernetes systems that automatically detects and resolves unhealthy or failed containers to maintain the desired state of an application. The process is driven by a control loop that observes the current state, compares it to the desired state, and takes corrective action. Detection is achieved through node-level monitoring and container-level health probes, including liveness, readiness, and startup checks. Recovery occurs in two phases: local container restarts on the same node or rescheduling to a different node if the host is unhealthy. The system includes safeguards like CrashLoopBackOff to prevent infinite restart loops and replication controllers to ensure consistent pod counts. This document explains the architecture, detection mechanisms, recovery workflow, and policies that enable automated healing in Kubernetes clusters.
+
+## Key Topics & Semantic Keywords
 
 - Self-healing mechanisms  
 - Microservices architecture  
@@ -31,6 +34,25 @@ This document group contains technical documentation related to a self-healing d
 - AI-based failure analysis  
 - Circuit breaker pattern  
 - Graceful fallback strategies  
+- Kubernetes  
+- Pod recovery  
+- Control loop  
+- Kubelet  
+- Liveness probe  
+- Readiness probe  
+- Startup probe  
+- CrashLoopBackOff  
+- ReplicaSet  
+- Deployment  
+- Scheduler  
+- Replication controller  
+- Container orchestration  
+- Pod lifecycle management  
+- Desired state  
+- Node-level failure detection  
+- Container-level health checks  
+- Self-healing architecture  
+- K8s recovery mechanism  
 
 ## Team & Metadata
 
@@ -39,4 +61,4 @@ This document group contains technical documentation related to a self-healing d
 | Team        | N/A   |
 | Project     | test-github-data-ingestion |
 | Status      | Active |
-| Last Updated | 2026-06-08 |
+| Last Updated | 2026-06-12 |
