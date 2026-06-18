@@ -15,12 +15,31 @@ This document group contains technical documentation related to the development 
 - **test-github-data-ingestion** (Source: GitHub)  
   Describes the Automated ML Model Evaluation Service, a core MLOps component designed to provide standardized, automated evaluation of machine learning models before production deployment. It acts as an independent quality gate, ensuring models meet performance, fairness, and robustness criteria. The service evaluates models against historical baselines, detects bias and overfitting, and enforces automated quality gates. It includes slice-based performance auditing, fairness analysis, and explainability reporting. The evaluation pipeline includes data ingestion, inference execution, metrics calculation, and decision-making based on predefined thresholds. The system supports classification, regression, and fairness testing, with a focus on statistical validation and compliance. It integrates with the Model Registry and Deployment Engine, operating as an asynchronous worker pipeline. Key components include the Data Ingestor, Inference Runner, Metrics Calculator, and Decision Engine. The service ensures models outperform production baselines, meet latency requirements, and pass fairness checks. It also includes robustness testing against adversarial inputs and edge cases. The document outlines the service's architecture, evaluation suites, and future enhancements such as LLM evaluation.
 
-## Key Topics
+- **hyperparameter-optimization-in-ml-training-pipelines** (Source: Confluence)  
+  Outlines strategies for optimizing hyperparameters in machine learning training pipelines. It explains the difference between model parameters and hyperparameters, and evaluates core optimization techniques including grid search, random search, bayesian optimization, and multi-fidelity approaches like Hyperband. The focus is on improving model performance through efficient search and resource allocation in ML workflows. Key technical concepts include model training, validation metrics, compute budget, and statistical distributions. The document serves as a design guide for engineering teams implementing automated machine learning systems.
+
+## Key Topics & Semantic Keywords
 
 - Data ingestion workflow  
 - Model training automation  
 - Feature engineering techniques  
 - Hyperparameter tuning strategies  
+- Hyperparameter optimization (HPO)  
+- Grid search  
+- Random search  
+- Bayesian optimization  
+- Multi-fidelity optimization  
+- Hyperband / Asynchronous Successive Halving  
+- Gaussian processes  
+- Compute budget allocation  
+- Validation metrics  
+- Statistical distributions  
+- Hyperparameter vs. model parameter distinctions  
+- Hyperparameter search space design  
+- Model performance improvement  
+- Resource-efficient training  
+- Automated machine learning (AutoML)  
+- Hyperparameter tuning frameworks  
 - Model deployment and monitoring  
 - Experiment tracking and reproducibility  
 - Continuous retraining systems  
@@ -40,4 +59,4 @@ This document group contains technical documentation related to the development 
 | Team        | Machine Learning Engineering |
 | Project     | Test GitHub Data Ingestion |
 | Status      | Active |
-| Last Updated | 2026-06-09 |
+| Last Updated | 2026-06-18 |
