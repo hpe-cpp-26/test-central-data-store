@@ -10,6 +10,9 @@ This document group contains technical documentation related to the architecture
 - **netflix-system-troubleshooting-runbook** (Source: Confluence)  
   Outlines common troubleshooting procedures for the Netflix system, covering scenarios such as streaming service unavailability, login failures, high API latency, database connection exhaustion, Redis cache failure, Kafka message backlog, deployment failure, out-of-memory issues, external service failure, and node failure.
 
+- **netflix-system-architecture-troubleshooting-guide** (Source: Confluence)  
+  Provides troubleshooting guidance for the Netflix video streaming platform, focusing on video delivery, API gateway routing, and data consistency. It addresses failure scenarios in the Open Connect CDN, microservice architecture, and distributed database systems. Key technical concepts include CDN caching, API gateway routing, circuit breakers, distributed tracing, Cassandra, and EVCache.
+
 ## Key Topics & Semantic Keywords
 - Global video streaming architecture  
 - Control plane and data plane separation  
@@ -34,6 +37,15 @@ This document group contains technical documentation related to the architecture
 - Log analysis and debugging  
 - Deployment validation  
 - Performance degradation mitigation  
+- Open Connect CDN troubleshooting  
+- API gateway routing failures  
+- Distributed tracing for microservices  
+- Cassandra replication lag  
+- EVCache cache miss analysis  
+- DNS routing optimization  
+- Client-side buffering diagnostics  
+- HTTP 500 error resolution  
+- User state consistency validation  
 
 ## Team & Metadata
 
@@ -42,4 +54,4 @@ This document group contains technical documentation related to the architecture
 | Team        | Systems Architecture           |
 | Project     | test-github-data-ingestion     |
 | Status      | Approved                       |
-| Last Updated| June 18, 2026                  |
+| Last Updated| June 30, 2026                  |
