@@ -18,6 +18,9 @@ This document group contains technical documentation related to the development 
 - **hyperparameter-optimization-in-ml-training-pipelines** (Source: Confluence)  
   Outlines strategies for optimizing hyperparameters in machine learning training pipelines. It explains the difference between model parameters and hyperparameters, and evaluates core optimization techniques including grid search, random search, bayesian optimization, and multi-fidelity approaches like Hyperband. The focus is on improving model performance through efficient search and resource allocation in ML workflows. Key technical concepts include model training, validation metrics, compute budget, and statistical distributions. The document serves as a design guide for engineering teams implementing automated machine learning systems.
 
+- **handling-underfitting-and-overfitting-in-ml-pipelines** (Source: GitHub)  
+  Outlines strategies for addressing underfitting and overfitting in machine learning pipelines. It defines diagnostic criteria for identifying these issues using training and validation performance metrics and provides actionable solutions such as increasing model complexity, improving feature engineering, applying regularization techniques like L1 and L2, and using ensemble methods. The document emphasizes best practices for pipeline design, including strict data splitting, cross-validation, and automated experiment tracking. It serves as a technical guide for data scientists working on model generalization and performance optimization.
+
 ## Key Topics & Semantic Keywords
 
 - Data ingestion workflow  
@@ -51,6 +54,26 @@ This document group contains technical documentation related to the development 
 - Slice-based performance auditing  
 - Model explainability (SHAP, LIME)  
 - Robustness testing and adversarial analysis  
+- Underfitting (high bias)  
+- Overfitting (high variance)  
+- Bias-variance tradeoff  
+- Regularization (L1, L2)  
+- Dropout  
+- Early stopping  
+- Learning curves  
+- Model complexity  
+- Feature selection  
+- Data augmentation  
+- Cross-validation  
+- Ensemble methods (bagging, random forests)  
+- MLflow  
+- TensorBoard  
+- Model generalization  
+- Training data  
+- Validation data  
+- Test data  
+- Experiment tracking  
+- Model tuning  
 
 ## Team & Metadata
 
@@ -59,4 +82,4 @@ This document group contains technical documentation related to the development 
 | Team        | Machine Learning Engineering |
 | Project     | Test GitHub Data Ingestion |
 | Status      | Active |
-| Last Updated | 2026-06-18 |
+| Last Updated | 2026-07-03 |
