@@ -22,6 +22,10 @@ This document group contains technical documentation related to a self-healing d
   **Source Tool**: confluence  
   **Summary**: Pod recovery is a core mechanism in self-healing Kubernetes systems that automatically detects and resolves unhealthy or failed containers to maintain the desired state of an application. The process is driven by a control loop that observes the current state, compares it to the desired state, and takes corrective action. Detection is achieved through node-level monitoring and container-level health probes, including liveness, readiness, and startup checks. Recovery occurs in two phases: local container restarts on the same node or rescheduling to a different node if the host is unhealthy. The system includes safeguards like CrashLoopBackOff to prevent infinite restart loops and replication controllers to ensure consistent pod counts. This document explains the architecture, detection mechanisms, recovery workflow, and policies that enable automated healing in Kubernetes clusters.
 
+- **Title**: auto-scaling-and-self-provisioning-in-self-healing-distributed-systems  
+  **Source Tool**: confluence  
+  **Summary**: This document describes the mechanisms and strategies for auto-scaling and self-provisioning in self-healing distributed systems. It explains how systems dynamically adjust compute capacity based on load, using metrics such as CPU utilization, memory pressure, and request queue depth. It distinguishes between reactive, predictive, and scheduled scaling strategies, favoring horizontal scaling for resilience and avoiding single points of failure. The document also covers self-provisioning, which ensures that all required components are present and healthy by continuously comparing the actual system state to a declared desired state. It includes node replacement, health checks, readiness gates, and dependency provisioning to maintain system integrity. The integration of auto-scaling and self-provisioning is described as a continuous feedback loop that ensures resilience under both gradual load increases and sudden failures. Key technologies mentioned include Kubernetes, AWS Auto Scaling Groups, KEDA, Terraform, and Pulumi. The document serves as a design plan for building resilient, self-managing distributed systems.
+
 ## Key Topics & Semantic Keywords
 
 - Self-healing mechanisms  
@@ -53,6 +57,27 @@ This document group contains technical documentation related to a self-healing d
 - Container-level health checks  
 - Self-healing architecture  
 - K8s recovery mechanism  
+- Auto-scaling  
+- Self-provisioning  
+- Horizontal scaling  
+- Vertical scaling  
+- Desired state model  
+- Health checks  
+- Readiness gates  
+- Kubernetes  
+- AWS Auto Scaling Groups  
+- KEDA  
+- Terraform  
+- Pulumi  
+- Liveness check  
+- Replica management  
+- Graceful termination  
+- Infrastructure-as-code  
+- Predictive scaling  
+- Reactive scaling  
+- Scheduled scaling  
+- Node replacement  
+- Infrastructure provisioning  
 
 ## Team & Metadata
 
@@ -61,4 +86,4 @@ This document group contains technical documentation related to a self-healing d
 | Team        | N/A   |
 | Project     | test-github-data-ingestion |
 | Status      | Active |
-| Last Updated | 2026-06-12 |
+| Last Updated | 2026-07-16 |
