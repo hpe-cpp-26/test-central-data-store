@@ -15,6 +15,9 @@ This document group contains technical design documentation for a high-throughpu
 - **local-payment-service-setup-guide** (Source: Confluence)  
   A step-by-step implementation guide for setting up and running the local development environment for the payment service, covering Python, Docker, environment configuration, and development practices.
 
+- **payment-system-troubleshooting-guide** (Source: Confluence)  
+  A troubleshooting guide for a payment system covering incident response procedures, error categorization, and remediation steps. It outlines the payment flow from client checkout through payment gateway, processor, acquiring bank, and issuing bank.
+
 ## Key Topics & Semantic Keywords
 
 - Exactly-once processing
@@ -38,10 +41,58 @@ This document group contains technical design documentation for a high-throughpu
 - Local development setup
 - Payment service configuration
 - Dev environment guide
+- Payment gateway
+- Stripe
+- PayPal
+- Adyen
+- Datadog
+- New Relic
+- Kibana
+- Splunk
+- CloudWatch
+- Webhook
+- AVS
+- CVV
+- Fraud prevention
+- Kafka
+- RabbitMQ
+- Dead-letter queue
+- API key
+- Transaction ID
+- Charge ID
+- Payment intent ID
+- Payment System Runbook
+- Payment Processing Incident Response Guide
+- Payment Gateway Troubleshooting SOP
+- Payment System Error Handling Documentation
+- Incident response
+- Error categorization
+- Log correlation
+- Webhook troubleshooting
+- Fraud rejections
+- Bank declines
+- Soft declines
+- Hard declines
+- Escalation matrix
+- Dead-letter queues
+- Charge ID validation
+- Payment intent ID tracking
+- API key rotation
+- Payment flow diagnostics
+- Transaction lifecycle
+- Payment gateway status pages
+- Network latency monitoring
+- Fraud prevention dashboards
+- IP blocklist
+- Velocity rules
+- Webhook endpoint validation
+- Webhook signature verification
+- Multi-gateway routing
+- Critical support ticket escalation
 
 ## Core Domain & Boundaries
 
-This group is focused on the technical design and implementation of a secure, scalable, and compliant payment processing system. It includes architectural blueprints, requirements specifications, and implementation guides for local development and deployment. The scope includes payment processing logic, infrastructure setup, and development tooling, but does not extend to external integrations beyond defined payment gateways or third-party services.
+This group is focused on the technical design and implementation of a secure, scalable, and compliant payment processing system. It includes architectural blueprints, requirements specifications, implementation guides for local development and deployment, and operational runbooks for troubleshooting and incident response. The scope includes payment processing logic, infrastructure setup, development tooling, and monitoring and diagnostics for production systems. The group does not extend to external integrations beyond defined payment gateways or third-party services.
 
 ## Team & Metadata
 
@@ -50,4 +101,4 @@ This group is focused on the technical design and implementation of a secure, sc
 | Team        | hpe-cpp-26 |
 | Project     | test-github-data-ingestion |
 | Status      | in-progress |
-| Last Updated | 2026-06-23T10:51:14.816Z |
+| Last Updated | 2026-07-16T10:05:51.283Z |
